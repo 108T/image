@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cartoonize Image</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="text-center mt-5">Upload an Image to Cartoonize</h1>
+        <form method="POST" action="/predict" enctype="multipart/form-data">
+            <div class="form-group">
+                <label for="file">Upload Image:</label>
+                <input type="file" name="file" class="form-control-file" required>
+            </div>
+            <div class="form-group">
+                <label for="style">Select Style:</label>
+                <select name="style" class="form-control" required>
+                    <option value="" disabled selected>Select a style</option>
+                    <option value="Style1">Cartoon Style 1</option>
+                    <option value="Style2">Cartoon Style 2</option>
+                    <option value="Style3">Pencil Sketch (Gray)</option>
+                    <option value="Style4">Pencil Sketch (Color)</option>
+                    <option value="Style6">Brightend Image</option>
+                </select>
+            </div>
+            <button type="submit" class="btn btn-primary">Cartoonize</button>
+        </form>
+    </div>
+</body>
+</html>
